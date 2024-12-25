@@ -1,5 +1,6 @@
 import { Github, Linkedin } from "lucide-react";
 // import { Button } from "../ui/Button";
+import imagePath from "./../../Image/Ravi Shankar Pratihast.jpeg";
 
 export function Hero() {
   return (
@@ -55,7 +56,7 @@ export function Hero() {
             <div className="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
               <img
                 className="w-full rounded-lg"
-                src="/src/Image/Ravi Shankar Pratihast.jpeg"
+                src={imagePath}
                 alt="Developer workspace"
               />
             </div>
