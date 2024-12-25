@@ -1,6 +1,8 @@
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, FileDown } from "lucide-react";
+
 // import { Button } from "../ui/Button";
 import imagePath from "./../../Image/Ravi Shankar Pratihast.jpeg";
+import resumeFile from "../../Assets/RaviSPratihast_Frontend.pdf";
 
 export function Hero() {
   return (
@@ -25,12 +27,19 @@ export function Hero() {
               creating seamless, high-quality web solutions that meet both user
               needs and business goals.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4">
+            <div className="mt-8 flex  flex-col sm:flex-row sm:justify-center lg:justify-start gap-4">
               {/* <Button size="lg">
                 View Projects
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button> */}
               <div className="flex justify-center lg:justify-start space-x-6">
+                <a
+                  href={resumeFile}
+                  download="RaviSPratihast_Frontend.pdf"
+                  className="text-gray-500 hover:text-gray-900 dark:hover:text-gray-300"
+                >
+                  <FileDown />
+                </a>
                 <a
                   href="https://github.com/RaviPratihast"
                   className="text-gray-500 hover:text-gray-900 dark:hover:text-gray-300"
