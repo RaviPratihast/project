@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 // import { Button } from "../ui/Button";
 
 export function Hero() {
