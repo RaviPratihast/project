@@ -34,6 +34,13 @@ const projects: Project[] = [
     tech: ["ReactJS","React Router","Flexbox layout","TailwindCSS"],
     github: "https://github.com/RaviPratihast/my-todo-app-using-React",
     demo: "https://personalnoteapp.netlify.app/"
+  },{
+    title: "Kart UI - Component Library ",
+    description: "allows you to design and build web Apps faster by providing a range of reusable components.",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    tech: ["HTML","CSS"],
+    github: "https://github.com/RaviPratihast/kart-UI",
+    demo: "https://kart-ui.netlify.app/index.html"
   }
 ];
 
