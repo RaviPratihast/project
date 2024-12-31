@@ -2,8 +2,7 @@ import { Github, Linkedin, FileDown } from "lucide-react";
 
 // import { Button } from "../ui/Button";
 import imagePath from "./../../Image/Ravi Shankar Pratihast.jpeg";
-import resumeFile from "../../Assets/RaviSPratihast_Frontend.pdf";
-
+import resumeFile from "../../Assets/RaviShankarPratihast_FE.pdf";
 export function Hero() {
   return (
     <section className="pt-24 pb-16 bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
