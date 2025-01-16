@@ -20,6 +20,7 @@ const projects: Project[] = [
       "ReactJS",
       "Redux",
       "React Router",
+      "Firebase",
       "Flexbox layout",
       "TailwindCSS",
       "Lucide Icons",
