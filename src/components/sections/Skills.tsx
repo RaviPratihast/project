@@ -9,7 +9,7 @@ const skills = [
       "React",
       "Redux",
       "React Router",
-      "Redux(Learning)",
+      "Next JS(Learning)",
       "TypeScript(Learning)",
     ],
   },
