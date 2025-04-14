@@ -90,11 +90,7 @@ export function Projects() {
               key={project.title}
               className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-[1.02]"
             >
-              {/* <img
-                className="w-full h-48 object-cover"
-                src={project.image}
-                alt={project.title}
-              /> */}
+           
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                   {project.title}

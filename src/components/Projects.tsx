@@ -28,6 +28,7 @@ export function Projects() {
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Featured Projects</h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
             A selection of my recent work
+            div
           </p>
         </div>
 
@@ -69,6 +70,7 @@ export function Projects() {
                   </a>
                 </div>
               </div>
+
             </div>
           ))}
         </div>
