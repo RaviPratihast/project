@@ -7,16 +7,20 @@ const skills = [
     icon: <Layout className="h-6 w-6" />,
     items: [
       "React",
+      "JavaScript",
+      "TypeScript",
+      "NextJS",
+      "HTML/CSS",
+      "Responsive Design",
       "Redux",
       "React Router",
-      "Next JS(Learning)",
-      "TypeScript(Learning)",
+      
     ],
   },
   {
     category: "UI Technologies",
     icon: <Sparkles className="h-6 w-6" />,
-    items: ["Tailwind CSS", "Material-UI", "Lucid-React", "Styled Components"],
+    items: ["Tailwind CSS", "Material-UI", "Lucid-React","Shadcn", "Styled Components"],
   },
   {
     category: "Development Tools",
