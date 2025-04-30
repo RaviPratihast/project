@@ -4,7 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 // import { Button } from "../ui/Button";
 import imagePath from "./../../Image/Ravi Shankar Pratihast.jpeg";
-import resumeFile from "../../Assets/RaviSPratihastFE.pdf";
+import resumeFile from "../../Assets/Ravi-S-Pratihast.pdf";
 export function Hero() {
   return (
     <section className="pt-24 pb-16 ">
