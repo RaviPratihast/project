@@ -53,7 +53,7 @@ export function Contact() {
                 <div className="flex items-center">
                   <Mail className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
                   <span className="ml-4 text-gray-900 dark:text-white">
-                    ravishankarpratihast22@gmail.com
+                    Email
                   </span>
                 </div>
                 <button
