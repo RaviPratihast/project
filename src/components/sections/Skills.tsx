@@ -58,9 +58,9 @@ export function Skills() {
               key={skill.category}
               className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 hover:shadow-md transition-shadow"
             >
-              <div className="text-indigo-600 dark:text-indigo-400">
+              {/* <div className="text-indigo-600 dark:text-indigo-400">
                 {skill.icon}
-              </div>
+              </div> */}
               <h3 className="mt-4 text-lg font-medium text-gray-900 dark:text-white">
                 {skill.category}
               </h3>

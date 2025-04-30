@@ -12,14 +12,14 @@ export function Hero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
             <h1>
-              <span className="block text-base font-semibold tracking-wide text-indigo-600 dark:text-indigo-400 uppercase animate-fade-in-up">
+              <span className="block text-start text-base font-semibold tracking-wide text-indigo-600 dark:text-indigo-400 animate-fade-in-up">
                 Frontend Engineer
               </span>
-              <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl text-gray-900 dark:text-white animate-fade-in-up ">
+              <span className="mt-1 text-start block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl text-gray-900 dark:text-white animate-fade-in-up ">
                 Ravi Shankar Pratihast
               </span>
             </h1>
-            <p className="mt-3 text-base text-gray-500 dark:text-gray-400 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl animate-fade-in-up [animation-delay:100ms]">
+            <p className="mt-3 text-base text-justify text-gray-500 dark:text-gray-400 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl animate-fade-in-up [animation-delay:100ms]">
               I craft exceptional web experiences using modern technologies and
               best practices. Specializing in React, responsive design, and
               ensuring smooth version control with Git, I focus on building
@@ -29,7 +29,7 @@ export function Hero() {
               needs and business goals.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4 animate-fade-in-up [animation-delay:200ms]">
-              <div className="flex justify-center lg:justify-start space-x-6">
+              <div className="flex justify-start md:justify-start lg:justify-start space-x-6">
                 <a
                   href={resumeFile}
                   download="RaviSPratihast_Frontend.pdf"
