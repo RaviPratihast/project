@@ -14,13 +14,18 @@ const skills = [
       "Responsive Design",
       "Redux",
       "React Router",
-      
     ],
   },
   {
     category: "UI Technologies",
     icon: <Sparkles className="h-6 w-6" />,
-    items: ["Tailwind CSS", "Material-UI", "Lucid-React","Shadcn", "Styled Components"],
+    items: [
+      "Tailwind CSS",
+      "Material-UI",
+      "Lucid-React",
+      "Shadcn",
+      "Styled Components",
+    ],
   },
   {
     category: "Development Tools",

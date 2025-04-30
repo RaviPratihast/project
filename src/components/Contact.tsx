@@ -1,85 +1,140 @@
-// import React from 'react';
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Copy, Check } from "lucide-react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export function Contact() {
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
+
+  const copyToClipboard = (text: string, type: "email" | "phone") => {
+    navigator.clipboard.writeText(text);
+    if (type === "email") {
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 2000);
+    } else {
+      setCopiedPhone(true);
+      setTimeout(() => setCopiedPhone(false), 2000);
+    }
+  };
+
   return (
     <section
       id="contact"
       className="py-16 bg-white dark:bg-gray-900 transition-colors duration-200"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
             Get in Touch
           </h2>
-          {/* <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-            Let's discuss your next project
-          </p> */}
-        </div>
+        </motion.div>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2 ">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2"
+        >
           <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8">
             <div className="space-y-6">
-              <div className="flex items-center">
-                <Mail className="h-6 w-6 text-indigo-600" />
-                <span className="ml-4 text-gray-900 dark:text-white">
-                  ravishankarpratihast22@gmail.com
-                </span>
-              </div>
-              <div className="flex items-center">
-                <Phone className="h-6 w-6 text-indigo-600" />
-                <span className="ml-4 text-gray-900 dark:text-white">
-                  +91 - 7002161376
-                </span>
-              </div>
-              <div className="flex items-center">
-                <MapPin className="h-6 w-6 text-indigo-600" />
+              <motion.div
+                className="flex items-center justify-between group"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="flex items-center">
+                  <Mail className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
+                  <span className="ml-4 text-gray-900 dark:text-white">
+                    ravishankarpratihast22@gmail.com
+                  </span>
+                </div>
+                <button
+                  onClick={() =>
+                    copyToClipboard("ravishankarpratihast22@gmail.com", "email")
+                  }
+                  className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                >
+                  {copiedEmail ? (
+                    <Check className="h-5 w-5 text-green-500" />
+                  ) : (
+                    <Copy className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+                  )}
+                </button>
+              </motion.div>
+
+              <motion.div
+                className="flex items-center justify-between group"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="flex items-center">
+                  <Phone className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
+                  <span className="ml-4 text-gray-900 dark:text-white">
+                    +91 - 7002161376
+                  </span>
+                </div>
+                <button
+                  onClick={() => copyToClipboard("+917002161376", "phone")}
+                  className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                >
+                  {copiedPhone ? (
+                    <Check className="h-5 w-5 text-green-500" />
+                  ) : (
+                    <Copy className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+                  )}
+                </button>
+              </motion.div>
+
+              <motion.div
+                className="flex items-center"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+              >
+                <MapPin className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
                 <span className="ml-4 text-gray-900 dark:text-white">
                   Bangaluru, India
                 </span>
-              </div>
+              </motion.div>
             </div>
           </div>
 
-          {/* <form className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-              />
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8"
+          >
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+              Connect with me
+            </h3>
+            <div className="flex space-x-4">
+              <motion.a
+                href="https://www.linkedin.com/in/ravipratihast/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <svg
+                  className="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </motion.a>
             </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={4}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full px-4 py-2 border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            >
-              Send Message
-            </button>
-          </form> */}
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,80 +1,19 @@
 import React from "react";
 import { ExternalLink, Github } from "lucide-react";
-
-interface Project {
-  title: string;
-  description: string;
-  image: string;
-  tech: string[];
-  github: string;
-  demo: string;
-}
-
-const projects: Project[] = [
-  {
-    title: "Fwiggy - A Food Delivery webApp",
-    description: "A Food Delivery App, built with React.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2015&q=80",
-    tech: [
-      "ReactJS",
-      "Redux",
-      "React Router",
-      "Firebase",
-      "Flexbox layout",
-      "TailwindCSS",
-      "Lucide Icons",
-      "React Icons",
-    ],
-    github: "https://github.com/RaviPratihast/fwiggy",
-    demo: "https://fwiggyforfood.netlify.app/",
-  },
-  {
-    title: "VidIn - A video library App",
-    description: "A video library for watching videos, built with React.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2015&q=80",
-    tech: ["ReactJS", "React Router", "Flexbox layout", "TailwindCSS"],
-    github: "https://github.com/RaviPratihast/vidin",
-    demo: "https://vidin.netlify.app/",
-  },
-  {
-    title: "Kartshop - E-commerce platform",
-    description:
-      "E-commerce platform, catering to a wide variety of products ranging from clothing to electronics.",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    tech: ["ReactJS", "React Router", "Flexbox layout", "TailwindCSS"],
-    github: "https://github.com/RaviPratihast/ecom-kartshop",
-    demo: "https://kartshop-ecom.netlify.app/",
-  },
-  {
-    title: "Personal Note - Basic notes web app. ",
-    description:
-      "basic notes web app inspired by google keep which you can use to jot down important pieces of ideas and list anything that is of importance to you anytime.",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    tech: ["ReactJS", "React Router", "Flexbox layout", "TailwindCSS"],
-    github: "https://github.com/RaviPratihast/my-todo-app-using-React",
-    demo: "https://personalnoteapp.netlify.app/",
-  },
-  {
-    title: "Kart UI - Component Library ",
-    description:
-      "allows you to design and build web Apps faster by providing a range of reusable components.",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    tech: ["HTML", "CSS"],
-    github: "https://github.com/RaviPratihast/kart-UI",
-    demo: "https://kart-ui.netlify.app/index.html",
-  },
-];
+import { motion } from "framer-motion";
+import { projects } from "../../data/projects";
 
 export function Projects() {
   return (
     <section id="projects" className="py-16 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">
             Featured Projects
           </h2>
@@ -82,50 +21,82 @@ export function Projects() {
             Here are some of my recent projects showcasing my frontend
             development skills
           </p>
-        </div>
+        </motion.div>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
-          {projects.map((project) => (
-            <div
+          {projects.map((project, index) => (
+            <motion.div
               key={project.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
               className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-[1.02]"
             >
-           
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                <motion.h3
+                  className="text-xl font-semibold text-gray-900 dark:text-white"
+                  whileHover={{ scale: 1.02 }}
+                >
                   {project.title}
-                </h3>
+                </motion.h3>
                 <p className="mt-2 text-gray-500 dark:text-gray-400">
                   {project.description}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
-                    <span
+                    <motion.span
                       key={tech}
                       className="px-3 py-1 text-sm font-medium text-indigo-600 dark:text-indigo-400 bg-indigo-100 dark:bg-indigo-900/50 rounded-full"
+                      whileHover={{ scale: 1.05 }}
                     >
                       {tech}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
                 <div className="mt-6 flex space-x-4">
-                  <a
-                    href={project.github}
-                    className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
-                  >
-                    <Github className="h-5 w-5 mr-2" />
-                    Code
-                  </a>
-                  <a
-                    href={project.demo}
-                    className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
-                  >
-                    <ExternalLink className="h-5 w-5 mr-2" />
-                    Live Demo
-                  </a>
+                  {project.github && (
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Github className="h-5 w-5 mr-2" />
+                      Code
+                    </motion.a>
+                  )}
+                  {project.demo && (
+                    <motion.a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <ExternalLink className="h-5 w-5 mr-2" />
+                      Live Demo
+                    </motion.a>
+                  )}
+                  {project.projectLink && (
+                    <motion.a
+                      href={project.projectLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <ExternalLink className="h-5 w-5 mr-2" />
+                      Project Link
+                    </motion.a>
+                  )}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
