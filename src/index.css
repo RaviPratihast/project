@@ -3,7 +3,36 @@
 @tailwind utilities;
 
 @layer base {
+  html,
   body {
     @apply antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@keyframes footer-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.footer-home-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: footer-marquee 22s linear infinite;
+}
+
+@media (max-width: 640px) {
+  .footer-home-marquee-track {
+    animation-duration: 28s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-home-marquee-track {
+    animation: none;
   }
 }

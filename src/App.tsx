@@ -9,8 +9,13 @@ import { Home } from "./pages/Home";
 export default function App() {
   return (
     <ThemeProvider>
-      <Router>
-        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
+      <Router
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true,
+        }}
+      >
+        <div className="shell-home min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
           <Navbar />
           <Home />
           <Footer />

@@ -9,13 +9,13 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     company: "Quixta",
-    role: "Frontend Intern",
+    role: "Frontend Engineer",
     location: "Bengaluru, India",
     duration: "Apr 2025 – Present",
     responsibilities: [
-      "Developing frontend using TypeScript, Next.js, and ShadCN UI components.",
-      "Converted full Figma designs into responsive web interfaces.",
-      "Integrated CMS for dynamic content management.",
+      "Ship production websites and web apps with TypeScript and Next.js from Figma — APIs, state, and reusable UI modules.",
+      "Improved Lighthouse scores and optimized client-side rendering for scale.",
+      "Collaborated with designers and engineers on delivery and quality.",
     ],
   },
   {
@@ -24,9 +24,9 @@ export const experiences: Experience[] = [
     location: "Bengaluru, India",
     duration: "Jul 2024 – Apr 2025",
     responsibilities: [
-      "Built and optimized responsive UI components using React.js, Next.js, and Tailwind CSS.",
-      "Integrated APIs for seamless user experiences.",
-      "Ensured cross-browser compatibility and performance optimizations.",
+      "Built and optimized scalable, reusable UI with React, Next.js, and Tailwind CSS.",
+      "Integrated APIs for a fast, consistent experience across surfaces.",
+      "Partnered with design and product for pixel-accurate, accessible UI; cross-browser support, performance, and mobile responsiveness.",
     ],
   },
   {
