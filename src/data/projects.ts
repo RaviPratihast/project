@@ -11,6 +11,14 @@ export interface Project {
 /** Order and copy aligned with resume (FlowCV, Mar 2026); extras below are additional shipped work. */
 export const projects: Project[] = [
   {
+    title: "India Startup — Legal & compliance platform",
+    description:
+      "End-to-end legal, compliance, and financial services for startups in India — fast company registration, seamless compliance, and reliable support at every stage.",
+    image: "/Images/indiastartup.png",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "React Hook Form", "Zod"],
+    demo: "https://indiastartup.in",
+  },
+  {
     title: "Profx",
     description:
       "Production live site at profx.com — scalable architecture, responsive layout, and performance tuning. Worked with stakeholders to ship a robust, user-focused platform.",
